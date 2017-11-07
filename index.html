@@ -83,23 +83,35 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading">Ricevimento</h4>
+            <p class="text-muted hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
-          <div class="col-md-8" id="map"></div>
+          <div class="col-md-2"></div>
+          <div class="col-md-6" id="map"></div>
           <script>
             function initMap() {
-              var uluru = {lat: 46.297388, lng:10.2742569};
+              var gim_pini = {lat: 46.297388, lng:10.2742569};
+              var san_fedele= {lat:46.1764839, lng:9.9294743};
               var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 10,
-                center: uluru
+                center: gim_pini
               });
-              var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-              });
+              var directionsService = new google.maps.DirectionsService;
+              var directionsDisplay = new google.maps.DirectionsRenderer;
+              directionsDisplay.setMap(map);
+              var dir  =  directionsService.route({
+                origin: san_fedele,
+                destination: gim_pini,
+                travelMode: 'DRIVING'
+              }, function(response, status) {
+                  if (status === 'OK') {
+                    directionsDisplay.setDirections(response);
+                  } else {
+                    window.alert('Directions request failed due to ' + status);
+                  }
+                }
+              );
             }
-            
           </script>
           <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxrNlavKs6IuqwewRj6flqFK4RU4Pp7g&callback=initMap">
