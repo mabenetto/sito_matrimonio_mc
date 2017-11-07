@@ -44,7 +44,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">Viaggio di Nozze</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">boh</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Lista Nozze</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Social</a>
@@ -73,49 +73,57 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Ricevimento</h2>
-            <h3 class="section-subheading text-muted">Il ricevimento si svolgerà presso l'hotel sassella a Grosio (So)</h3>
+            <h2 class="section-heading">Matrimonio</h2>
+            <br>
+            <div class="row">
+              <div class="col-md-4">
+                <h4 class="service-heading">Cerimonia</h4>
+                <p class="text-muted">La cerimonia sarà alle ore 11:00 alla chiesa di San Fedele a Poggiridenti (So). </p>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-6" >
+                  <img src="img/sanFedele.jpg" alt="">
+              </div>
+            </div>  
           </div>
         </div>
+        <br>
         <div class="row text-center col-md-12">
           <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
             <h4 class="service-heading">Ricevimento</h4>
-            <p class="text-muted hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted hidden-xs">Dalla chiesa di San Fedele ci sposterememo verso il luogo del ricevimento, che si svolgerà presso l'hotel sassella a Grosio (So)</p>
           </div>
           <div class="col-md-2"></div>
-          <div class="col-md-6" id="map"></div>
-          <script>
-            function initMap() {
-              var gim_pini = {lat: 46.297388, lng:10.2742569};
-              var san_fedele= {lat:46.1764839, lng:9.9294743};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: gim_pini
-              });
-              var directionsService = new google.maps.DirectionsService;
-              var directionsDisplay = new google.maps.DirectionsRenderer;
-              directionsDisplay.setMap(map);
-              var dir  =  directionsService.route({
-                origin: san_fedele,
-                destination: gim_pini,
-                travelMode: 'DRIVING'
-              }, function(response, status) {
-                  if (status === 'OK') {
-                    directionsDisplay.setDirections(response);
-                  } else {
-                    window.alert('Directions request failed due to ' + status);
-                  }
+          <div class="col-md-6" style="height:300px" id="map"></div>
+       
+        <script>
+          function initMap() {
+            var gim_pini = {lat: 46.297388, lng:10.2742569};
+            var san_fedele= {lat:46.1764839, lng:9.9294743};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 10,
+              center: gim_pini
+            });
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+            directionsDisplay.setMap(map);
+            var dir  =  directionsService.route({
+              origin: san_fedele,
+              destination: gim_pini,
+              travelMode: 'DRIVING'
+            }, function(response, status) {
+                if (status === 'OK') {
+                  directionsDisplay.setDirections(response);
+                } else {
+                  window.alert('Directions request failed due to ' + status);
                 }
-              );
-            }
-          </script>
-          <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxrNlavKs6IuqwewRj6flqFK4RU4Pp7g&callback=initMap">
-          </script>
+              }
+            );
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxrNlavKs6IuqwewRj6flqFK4RU4Pp7g&callback=initMap">
+        </script>
         </div>
       </div>
     </section>
@@ -443,36 +451,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2017</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
+            <span class="copyright">Copyright &copy; MarcoeChiara2018</span>
           </div>
         </div>
       </div>
