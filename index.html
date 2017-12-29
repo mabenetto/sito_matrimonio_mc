@@ -43,9 +43,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Viaggio di Nozze</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Lista Nozze</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">RSVP</a>
             </li>
@@ -227,10 +227,16 @@
           </div>
         </div>
       </div>
+        <div class="col-lg-12 text-center">
+          <div id="success"></div>
+            <a class="btn btn-xl"  data-toggle="modal" href="#bottoneIBAN">Clicca qui se vuoi partecipare al regalo!</a>
+          </div>
+        </div>
+        
     </section>
 
     <!-- About -->
-    <section id="about">
+    <!-- <section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -308,7 +314,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     
 
@@ -334,14 +340,10 @@
                     <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
                     <p class="help-block text-danger"></p>
                   </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
-                    <p class="help-block text-danger"></p>
-                  </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                    <textarea class="form-control" id="message" placeholder="Se avete voglia scrivete due righe agli sposi!"></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -582,6 +584,77 @@
       </div>
     </div>
 
+
+
+
+    <div class="portfolio-modal modal fade" id="bottoneIBAN" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Grazie Mille!</h2>
+                  <p>
+                    Siamo commossi che voi vogliate aiutarci nell'inizio di questa nuova avventura. 
+                    Come in tanti di voi sanno il primo anno e mezzo vivremo in una casa già arredata in attesa che la nuova casa finisca di essere costruita.
+                    Per questo motivo non abbiamo voluto fare una lista nozze come la tradizione dei regali da matrimonio comanda. Ci sembrava brutto chiedervi di regalarci delle cose
+                    che poi non avremmo comprato per qualche anno. Per questo vi chiediamo innanzitutto di contribuire al viaggio di nozze che sarà già un regalo enorme!
+                    <br>
+                    <br>
+                    <b>IBAN: </b><br>
+                    <b>Intestato a:</b> Marco Benetti<br>
+                    <b>Causale:</b> Regalo Viaggio di Nozze<br>
+                    <br>
+                    <br>
+                    L'altra opzione è farci un regalo personale a noi facendo un bonifico a uno dei nostri due IBAN! Siamo tuttavia aperti a consigli! 
+                    Quindi se volete scriverci un messaggio di auguri o consigliarci qualcosa da comprare come regalo scrivetercelo tramite il campo qua sotto!
+                    <br>
+                    <br>
+                    <form>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea class="form-control" id="messageRegalo" placeholder="Se avete voglia scrivete due righe agli sposi!" required data-validation-required-message="Please enter your email address."></textarea>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                          <button id="sendMessageButton" class="btn btn-primary pull-right" type="submit">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+                    <br>
+                    <b>IBAN: </b><br>
+                    <b>Intestato a: </b> Marco Benetti<br>
+                    <b>Causale: </b> Regalo di Nozze<br>
+                    <br>
+                    <br>
+                    <b>IBAN: </b><br>
+                    <b>Intestato a: </b> Chiara Soriani<br>
+                    <b>Causale: </b> Regalo di Nozze<br>
+                  </p>
+                  
+
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
