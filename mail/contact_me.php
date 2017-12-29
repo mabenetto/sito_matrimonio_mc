@@ -1,6 +1,8 @@
 <?php
 require 'classi/PHPMailer.php';
 require 'classi/Exception.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
