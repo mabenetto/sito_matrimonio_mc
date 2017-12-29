@@ -20,8 +20,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 $email_subject = "Conferma Presenza Matrimonio:  $name";
 $email_body = "$name\n ha confermato la presenza al matrimonio: $email_address\n\nPhone: $phone\n\n Messaggio:\n$message";
 
-$mail = new PHPMailer(true);
-$mail->isSMTP();
+$mail = new PHPMailer;
 
 $mail->setFrom($email_address, $name);
 $mail->addAddress('mabenett@gmail.com', 'Marco')
