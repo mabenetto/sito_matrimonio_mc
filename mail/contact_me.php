@@ -11,8 +11,8 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $from = $_POST['email']; 
-$to = 'mabenett@gmail.com '; 
-$subject = 'conferma invitato: $name';
+$to = 'info@marcoechiara2018.it'; 
+$subject = 'conferma invitato:'.$name;
 $body = "From:".$name."\n E-Mail: ".$email."\n Message:\n ".$message;
 mail($to,$subject,$body);
 ?>
