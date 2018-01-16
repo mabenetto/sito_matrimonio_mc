@@ -5,14 +5,15 @@ require 'classi/classe_mysql.php';
 $conn = new classe_DB('localhost', 'root', 'CoccoBim_91', 'chiara_marco');
 
 
-var_dump($conn->query_risultati('Select * from invitati'));
-die();
+
+
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $token = $_POST['token'];
 $text = "Conferma presenza da: ".$name."<br> From:".$name."<br> E-Mail: ".$email."<br> <b>Message<b>:<br> ".$message;
+
 
 
 // Replace path_to_sdk_inclusion with the path to the SDK as described in 
