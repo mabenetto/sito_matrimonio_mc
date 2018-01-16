@@ -15,9 +15,9 @@ $token = $_POST['token'];
 $text = "Conferma presenza da: ".$name."<br> From: ".$name."<br> E-Mail: ".$email."<br><br> <b>Message<b>:<br> ".$message;
 
 
-$sql = "INSERT into invitati (nome,email,message) value (:nome,:email,:message)";
+$sql = "INSERT into invitati (nome,email,message) value (:name,:email,:message)";
 
-$conn->esegui_query($sql, array($name, $email, $message));
+$conn->esegui_query($sql, array("name"=>$name, "email"=>$email, "message"=>$message));
 
 // Replace path_to_sdk_inclusion with the path to the SDK as described in 
 // http://docs.aws.amazon.com/aws-sdk-php/v3/guide/getting-started/basic-usage.html
