@@ -12,9 +12,12 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $token = $_POST['token'];
-$text = "Conferma presenza da: ".$name."<br> From:".$name."<br> E-Mail: ".$email."<br> <b>Message<b>:<br> ".$message;
+$text = "Conferma presenza da: ".$name."<br> From: ".$name."<br> E-Mail: ".$email."<br><br> <b>Message<b>:<br> ".$message;
 
 
+$sql = "INSERT into invitati (nome,email,message) value (:nome,:email,:message)";
+
+$conn->esegui_query($sql, array($name, $email, $message));
 
 // Replace path_to_sdk_inclusion with the path to the SDK as described in 
 // http://docs.aws.amazon.com/aws-sdk-php/v3/guide/getting-started/basic-usage.html
@@ -36,7 +39,7 @@ define('RECIPIENT', 'info@marcoechiara2018.it');
 // Replace us-west-2 with the AWS Region you're using for Amazon SES.
 define('REGION','eu-west-1'); 
 
-define('SUBJECT','Conferma presenza da: <b>'.$name.'<b>');
+define('SUBJECT','Conferma presenza da: '.$name.'');
 
 define('HTMLBODY',$text);
 define('TEXTBODY',$text);
