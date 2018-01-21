@@ -11,13 +11,14 @@ $conn = new classe_DB('localhost', 'root', 'CoccoBim_91', 'chiara_marco');
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+$intolleranze = $_POST['intolleranze'];
 $token = $_POST['token'];
-$text = "Conferma presenza da: ".$name."<br> From: ".$name."<br> E-Mail: ".$email."<br><br> <b>Message<b>:<br> ".$message;
+$text = "Conferma presenza da: ".$name."<br> From: ".$name."<br> E-Mail: ".$email."<br><br> <b>Message<b>:<br> ".$message."<br><br> <b>Intolleranze<b>:<br> ".$intolleranze;
 
 
-$sql = "INSERT into invitati (nome,email,message) value (:name,:email,:message)";
+$sql = "INSERT into invitati (nome,email,message, intolleranze) value (:name,:email,:message,:intolleranze)";
 
-$conn->esegui_query($sql, array("name"=>$name, "email"=>$email, "message"=>$message));
+$conn->esegui_query($sql, array("name"=>$name, "email"=>$email, "message"=>$message, "intolleranze"=>$intolleranze));
 
 // Replace path_to_sdk_inclusion with the path to the SDK as described in 
 // http://docs.aws.amazon.com/aws-sdk-php/v3/guide/getting-started/basic-usage.html
