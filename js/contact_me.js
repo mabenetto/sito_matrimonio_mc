@@ -10,7 +10,7 @@ $(function() {
       // get values from FORM
       var name = $("input#name").val();
       var email = $("input#email").val();
-      var intolleranze = $("input#intolleranze").val();
+      var intolleranze = $("#intolleranze").val();
       var token = $("input#token").val();
       var message = $("textarea#message").val();
       var firstName = name; // For Success/Failure Message
